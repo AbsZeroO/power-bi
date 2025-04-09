@@ -1,26 +1,26 @@
-## 📊 Disney Movies Revenue Dashboard (Power BI)
+# 📊 Dashboard Przychodów Filmów Disneya (Power BI)
 
-### 🔍 Project Overview
-Interactive dashboard created in **Power BI** based on historical revenue data of Disney movies released between **1937 and 2016**. The report was built as part of an analytical challenge and adheres to a strict set of **functional and non-functional requirements**.
-
----
-
-### 📁 Dataset
-- **Source:** Disney Movies dataset  
-- **Fields:**  
-  - `Movie Title`  
-  - `Date Released`  
-  - `Genre`  
-  - `MPA Rating`  
-  - `Total Gross`  
-  - `Inflation Adjusted Gross`
+### 🔍 Opis projektu
+Interaktywny dashboard stworzony w **Power BI** na podstawie danych o przychodach historycznych filmów Disneya wydanych w latach **1937-2016**. Raport został stworzony w ramach wyzwania analitycznego i spełnia ścisły zestaw **wymagań funkcjonalnych i niefunkcjonalnych**.
 
 ---
 
-### ⚙️ Tools & Technologies
-- **Power BI** (DAX, custom visuals, bookmarks, slicers)
-- **Power Query** for data transformation and API integration
-- **OMDb API** integration to fetch movie posters dynamically using movie title and release year
+### 📁 Zbiór danych
+- **Źródło:** Zbiór danych o filmach Disneya  
+- **Kolumny:**  
+  - `Tytuł filmu`  
+  - `Data premiery`  
+  - `Gatunek`  
+  - `Kategoria wiekowa`  
+  - `Całkowity przychód`  
+  - `Całkowity przychód z uwzględnieniem inflacji`
+
+---
+
+### ⚙️ Narzędzia i technologie
+- **Power BI** (DAX, niestandardowe wizualizacje, zakładki, slicery)
+- **Power Query** do transformacji danych i integracji z API
+- **Integracja z OMDb API** w celu dynamicznego pobierania plakatów filmów na podstawie tytułu i roku premiery
 
 ```powerquery
 = (Tytul as text, Rok as nullable date) =>
@@ -41,38 +41,37 @@ in
 
 ---
 
-### ✅ Functionalities
-- Total number of Disney movies
-- Total gross revenue (with and without inflation adjustment)
-- Genre-based revenue share (excluding "Unknown")
-- Line chart showing revenue trends over the years
-- Top 10 movies by inflation-adjusted revenue difference
-- Filters by:
-  - Genre *(multi-select, excluding "Unknown")*
-  - Age rating *(multi-select, excluding "Unknown")*
-  - Release year *(multi-select range)*  
-- Dynamic movie poster integration from OMDb API
-- Movie identification through title (or title + release year if not unique)
+### ✅ Funkcjonalności
+- Łączna liczba filmów Disneya
+- Łączny przychód (z uwzględnieniem inflacji i bez)
+- Udział procentowy przychodu z gatunków filmowych (z wyłączeniem "Unknown")
+- Wykres liniowy pokazujący zmiany przychodu w czasie
+- Top 10 filmów według różnicy w przychodach z uwzględnieniem inflacji
+- Filtry:
+  - Gatunek *(wielokrotny wybór, z wyłączeniem "Unknown")*
+  - Kategoria wiekowa *(wielokrotny wybór, z wyłączeniem "Unknown")*
+  - Rok premiery *(zakres wielokrotnego wyboru)*  
+- Dynamiczna integracja plakatów filmów za pomocą OMDb API
+- Identyfikacja filmu na podstawie tytułu (lub tytuł + rok premiery, jeśli nieunikatowy)
 
 ---
 
-### 🧩 Missing Data Handling
-- If a selected year has no movie data:
-  - Numeric visualizations (e.g. cards, charts) return **0** instead of remaining blank
-  - Movie-related visuals display `"No Data"` as a placeholder title
-  - Layout remains responsive and informative even with no relevant data
+### 🧩 Obsługa brakujących danych
+- Jeśli wybrany rok nie zawiera danych o filmach:
+  - Wizualizacje numeryczne (np. karty, wykresy) zwracają **0** zamiast pozostawać puste
+  - Wizualizacje związane z filmami wyświetlają `"No Data"` jako tytuł zastępczy
+  - Układ pozostaje responsywny i informacyjny, nawet przy braku odpowiednich danych
 
 ---
 
-### 🌟 Key Focus Areas
-- Data visualization clarity and responsiveness
-- Strong UX & UI principles in a one-page layout
-- Business storytelling with emphasis on revenue growth and genre dynamics
+### 🌟 Kluczowe obszary
+- Jasność wizualizacji danych i responsywność
+- Silne zasady UX i UI w układzie na jednej stronie
+- Opowiadanie historii biznesowej z naciskiem na wzrost przychodów i dynamikę gatunków filmowych
 
 ---
 
-### 🖼️ Dashboard Preview
+### 🖼️ Podgląd dashboardu
 <p align="center">
-  <img src="image-1.png" alt="Disney Movies Power BI Dashboard Screenshot" width="700"/>
+  <img src="image-1.png" alt="Zrzut ekranu dashboardu Power BI - Filmy Disneya" width="700"/>
 </p>
-
