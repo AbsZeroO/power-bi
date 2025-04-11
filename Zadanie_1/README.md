@@ -1,4 +1,4 @@
-# 📊 Dashboard Przychodów Filmów Disneya (Power BI)
+# 📊 Dashboard Przychodów Filmów Disneya
 
 ### 🔍 Opis projektu
 Interaktywny dashboard stworzony w **Power BI** na podstawie danych o przychodach historycznych filmów Disneya wydanych w latach **1937-2016**. Raport został stworzony w ramach wyzwania analitycznego i spełnia ścisły zestaw **wymagań funkcjonalnych i niefunkcjonalnych**.
