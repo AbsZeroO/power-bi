@@ -1,0 +1,6 @@
+*.pbiviz
+*.png
+
+!MapPage.png
+!NothingScheduled.png
+!MainPage.png
