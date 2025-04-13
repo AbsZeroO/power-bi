@@ -1,3 +1,77 @@
+# ENG
+
+# 📊 Disney Movie Revenue Dashboard
+
+### 🔍 Project Overview  
+An interactive dashboard built in **Power BI** based on historical revenue data of Disney movies released between **1937 and 2016**. The report was developed as part of an analytics challenge and meets a strict set of **functional and non-functional requirements**.
+
+---
+
+### 📁 Dataset  
+- **Source:** Disney movie revenue dataset  
+- **Columns:**  
+  - `Movie Title`  
+  - `Release Date`  
+  - `Genre`  
+  - `Age Rating`  
+  - `Total Revenue`  
+  - `Inflation-Adjusted Revenue`
+
+---
+
+### ⚙️ Tools & Technologies  
+- **Power BI** (DAX, custom visuals, bookmarks, slicers)  
+- **Power Query** for data transformation and API integration  
+- **OMDb API integration** for dynamically retrieving movie posters based on title and release year
+
+```powerquery
+= (Title as text, Year as nullable date) =>
+let
+    ApiKey = "APIKEY",
+    YearText = if Year <> null then Text.From(Date.Year(Year)) else null,
+    BaseUrlWithYear = "http://www.omdbapi.com/?apikey=" & ApiKey & "&t=" & Uri.EscapeDataString(Title) & "&y=" & Uri.EscapeDataString(YearText),
+    BaseUrlWithoutYear = "http://www.omdbapi.com/?apikey=" & ApiKey & "&t=" & Uri.EscapeDataString(Title),
+
+    ResponseWithYear = Json.Document(Web.Contents(BaseUrlWithYear)),
+    PosterURLWithYear = try ResponseWithYear[Poster] otherwise null,
+
+    ResponseWithoutYear = if PosterURLWithYear = null then Json.Document(Web.Contents(BaseUrlWithoutYear)) else ResponseWithYear,
+    PosterURL = try ResponseWithoutYear[Poster] otherwise null
+in
+    PosterURL
+```
+
+### ✅ Features
+- Total number of Disney movies  
+- Total revenue (with and without inflation adjustment)  
+- Genre-based revenue percentage breakdown (excluding "Unknown")  
+- Line chart displaying revenue trends over time  
+- Top 10 movies ranked by inflation-adjusted revenue difference  
+- Filters:  
+  - Genre *(multi-select, excludes "Unknown")*  
+  - Age Rating *(multi-select, excludes "Unknown")*  
+  - Release Year *(multi-range selector)*  
+- Dynamic movie posters via OMDb API  
+- Movie identification based on title (or title + release year if not unique)
+
+---
+
+### 🧹 Missing Data Handling
+- If the selected year has no movie data:  
+  - Numerical visuals (cards, charts) return **0** instead of being blank  
+  - Movie visuals display `"No Data"` as a placeholder title  
+  - Layout remains responsive and informative despite missing data
+
+---
+
+### 🌟 Key Highlights
+- Clear data storytelling and responsive design  
+- Strong UX/UI principles within a one-page layout  
+- Business-focused insights on revenue growth and genre evolution
+
+
+# PLN
+
 # 📊 Dashboard Przychodów Filmów Disneya
 
 ### 🔍 Opis projektu

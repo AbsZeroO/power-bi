@@ -1,3 +1,68 @@
+# ENG
+
+## 📊 WTA Tour Tennis Tournament Dashboard (Power BI)
+
+### 🔍 Project
+An interactive **Power BI** report based on the 2025 **WTA Tour** tennis tournament data. The dashboard is designed to present comprehensive insights about upcoming tournaments, focusing on their category, location, date range, and court surface.
+
+---
+
+### 📁 Dataset
+- **Source:** WTA Tour 2025 tournament dataset  
+- **Columns:**  
+  - `Tournament`: Tournament name  
+  - `Category`: Tournament category  
+  - `City`: City or cities hosting the tournament  
+  - `Country`: Country hosting the tournament  
+  - `Start Date`: Tournament start date  
+  - `End Date`: Tournament end date  
+  - `Surface`: Court surface type
+
+---
+
+### ⚙️ Tools & Technologies
+- **Power BI** (DAX, custom visuals, bookmarks, slicers)  
+- **Custom Gantt Visual** for timeline display
+
+---
+
+### ✅ Features
+- Count of completed tournaments vs. total  
+- Chronological listing of tournaments  
+- Unique tournament name count  
+- Monthly time-axis visualization  
+- Full-width schedule layout  
+- Real-time tournament completion percentage  
+- Legend for tournament categories  
+- Hover tooltips showing surface type  
+- Filtering by:  
+  - Category *(multi-select)*  
+  - Country *(multi-select)*  
+  - Surface *(multi-select)*  
+  - Date range *(includes tournaments partially within selected dates)*
+- Additional features:  
+  - Interactive world map showing tournament locations  
+  - Filter for tournament completion status
+
+---
+
+### 🧹 Missing Data Handling
+- Missing entries default to **"Not Specified"** (notably for Billie Jean King Cup qualifiers)  
+  - Numeric visuals default to **0** instead of blanks or negatives  
+  - Tournament visuals display **"Nothing Scheduled At This Date"** if applicable  
+  - Layout remains fully responsive even with no matching data
+
+---
+
+### 🌟 Key Highlights
+- Clear, responsive, one-page design  
+- Clean data storytelling focusing on tournament dynamics  
+- UX/UI tested for edge cases: any tournament with dates overlapping the selected range appears correctly (e.g., no tournaments shown for June 29, 2025 if none are scheduled)
+
+
+
+# PLN
+
 ## 📊 WTA Tour Tennis Tournament Dashboard (Power BI)
 
 ### 🔍 Projekt
