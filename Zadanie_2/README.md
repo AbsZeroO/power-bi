@@ -1,6 +1,6 @@
 # ENG
 
-## 📊 WTA Tour Tennis Tournament Dashboard (Power BI)
+## 📊 WTA Tour Tennis Tournament Dashboard 2025
 
 ### 🔍 Project
 An interactive **Power BI** report based on the 2025 **WTA Tour** tennis tournament data. The dashboard is designed to present comprehensive insights about upcoming tournaments, focusing on their category, location, date range, and court surface.
@@ -63,7 +63,7 @@ An interactive **Power BI** report based on the 2025 **WTA Tour** tennis tournam
 
 # PLN
 
-## 📊 WTA Tour Tennis Tournament Dashboard (Power BI)
+## 📊 ## 📊 WTA Tour Tennis Tournament Dashboard 2025
 
 ### 🔍 Projekt
 Raport stworzony w **Power BI** na podstawie danych dotyczących turniejów tenisowych WTA Tour, które odbędą się w 2025 roku. Celem raportu jest przedstawienie szczegółowych informacji o nadchodzących turniejach, z uwzględnieniem ich kategorii, lokalizacji, dat oraz nawierzchni.
